@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura Grand Hotel & Resort</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loader">
+      <div class="spinner"></div>
+      <h2>AURA GRAND</h2>
+    </div>
+
+    <!-- Notification Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Header & Navigation -->
+    <header class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">AURA <span>GRAND</span></a>
+        <nav class="nav-links" id="nav-links">
+          <a href="#home" class="active">Home</a>
+          <a href="#rooms">Rooms</a>
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#bookings">My Bookings</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="#rooms" class="btn btn-gold">Book Now</a>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open Navigation Menu"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="subtitle">Welcome to Luxury & Elegance</span>
+        <h1>Experience Unrivaled Opulence</h1>
+        <p>
+          Escape to a world of refined elegance, world-class amenities, and
+          timeless hospitality.
+        </p>
+        <a href="#rooms" class="btn btn-gold btn-large">Explore Suites</a>
+      </div>
+
+      <!-- Quick Search Widget -->
+      <div class="search-box-container">
+        <form id="search-form" class="search-form">
+          <div class="form-group">
+            <label><i class="fas fa-calendar-alt"></i> Check-in</label>
+            <input type="date" id="search-checkin" required />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-calendar-check"></i> Check-out</label>
+            <input type="date" id="search-checkout" required />
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-user-friends"></i> Guests</label>
+            <select id="search-guests">
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4+ Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-bed"></i> Room Type</label>
+            <select id="search-room-type">
+              <option value="all">All Types</option>
+              <option value="Deluxe">Deluxe Room</option>
+              <option value="Executive">Executive Suite</option>
+              <option value="Presidential">Presidential Suite</option>
+              <option value="Penthouse">Penthouse</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-gold search-btn">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Statistics Banner -->
+    <section class="stats-section">
+      <div class="stat-item">
+        <h3 class="counter" data-target="150">0</h3>
+        <p>Luxury Rooms</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="counter" data-target="98">0</h3>
+        <p>Satisfaction Rate %</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="counter" data-target="25">0</h3>
+        <p>Awards Won</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="counter" data-target="12">0</h3>
+        <p>Michelin Chefs</p>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="about-section" id="about">
+      <div class="container grid-2">
+        <div class="about-text">
+          <span class="section-tag">About Aura Grand</span>
+          <h2>A Sanctuary of Sophistication and Rest</h2>
+          <p>
+            Situated in the heart of the city's coastal view, Aura Grand blends
+            architectural majesty with personalized hospitality. Whether you
+            seek a peaceful weekend retreat or a high-profile corporate
+            sanctuary, our suites are crafted to inspire.
+          </p>
+          <div class="highlights">
+            <div>
+              <i class="fas fa-check-circle"></i> 24/7 Dedicated Concierge
+            </div>
+            <div>
+              <i class="fas fa-check-circle"></i> Private Beach & Infinity Pool
+            </div>
+            <div>
+              <i class="fas fa-check-circle"></i> Complimentary Heli-pad Access
+            </div>
+          </div>
+        </div>
+        <div class="about-img">
+          <img
+            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+            alt="Hotel Luxury Interior"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Rooms Section -->
+    <section id="rooms" class="rooms-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Accommodations</span>
+          <h2>Our Featured Rooms & Suites</h2>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-bar">
+          <div class="filter-group">
+            <label>Filter by Category:</label>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Deluxe">Deluxe</button>
+            <button class="filter-btn" data-filter="Executive">
+              Executive
+            </button>
+            <button class="filter-btn" data-filter="Presidential">
+              Presidential
+            </button>
+            <button class="filter-btn" data-filter="Penthouse">
+              Penthouse
+            </button>
+          </div>
+          <div class="filter-group">
+            <label for="price-range"
+              >Max Price: $<span id="price-val">1000</span></label
+            >
+            <input
+              type="range"
+              id="price-range"
+              min="100"
+              max="1000"
+              step="50"
+              value="1000"
+            />
+          </div>
+        </div>
+
+        <!-- Room Cards Container -->
+        <div class="room-grid" id="room-grid"></div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Exclusive Amenities</span>
+          <h2>World-Class Services</h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-wifi"></i>
+            <h3>High-Speed WiFi</h3>
+            <p>Seamless 1 Gbps fiber connectivity throughout the property.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-swimming-pool"></i>
+            <h3>Infinity Pool</h3>
+            <p>Heated rooftop infinity pool with panoramic horizon views.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-spa"></i>
+            <h3>Wellness Spa</h3>
+            <p>Holistic hydrotherapy, massages, and organic treatments.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-utensils"></i>
+            <h3>Fine Dining</h3>
+            <p>
+              Three Michelin-starred culinary venues offering global flavors.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-dumbbell"></i>
+            <h3>Fitness Club</h3>
+            <p>State-of-the-art gym with personal trainers on standby.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-parking"></i>
+            <h3>Valet Parking</h3>
+            <p>Secure underground parking with EV charging stations.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-plane-arrival"></i>
+            <h3>Airport Transfer</h3>
+            <p>Luxury chauffeur pickup directly from the airport terminal.</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-concierge-bell"></i>
+            <h3>24/7 Room Service</h3>
+            <p>In-room dining served around the clock with gourmet speed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Visual Tour</span>
+          <h2>Photo Gallery</h2>
+        </div>
+        <div class="gallery-grid">
+          <div
+            class="gallery-item"
+            data-src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=500&q=80"
+              alt="Hotel Exterior"
+            />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div
+            class="gallery-item"
+            data-src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=500&q=80"
+              alt="Resort Pool"
+            />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div
+            class="gallery-item"
+            data-src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=500&q=80"
+              alt="Luxury Suite Bed"
+            />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div
+            class="gallery-item"
+            data-src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80"
+              alt="Restaurant Interior"
+            />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div
+            class="gallery-item"
+            data-src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1000&q=80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=500&q=80"
+              alt="Spa Room"
+            />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+          <div
+            class="gallery-item"
+            data-src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&q=80"
+              alt="Ocean View Lounge"
+            />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Reviews</span>
+          <h2>Guest Experiences</h2>
+        </div>
+        <div class="testimonial-slider">
+          <div class="testimonial-card active">
+            <div class="stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p>
+              "The level of detail and warmth displayed by the staff at Aura
+              Grand exceeded all expectations. The Penthouse view is simply
+              majestic."
+            </p>
+            <h4>- Eleanor Vance</h4>
+            <span>Executive Traveller</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Bookings Section -->
+    <section id="bookings" class="bookings-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Management</span>
+          <h2>My Reservations</h2>
+        </div>
+
+        <div class="booking-search-bar">
+          <input
+            type="text"
+            id="booking-search-input"
+            placeholder="Search by Booking ID or Name..."
+          />
+          <button class="btn btn-gold" id="btn-search-booking">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <div id="user-bookings-list" class="user-bookings-list">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Questions?</span>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              What are the standard check-in and check-out times?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Check-in starts at 3:00 PM, and check-out is until 11:00 AM.
+                Early check-in or late check-out can be arranged upon request
+                depending on availability.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Is airport shuttle service complimentary?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Airport transfer is included for all Penthouse and Presidential
+                Suite reservations. For other rooms, it is available for an
+                extra charge.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I cancel or modify my reservation?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes, you can manage or edit your booking directly in the "My
+                Bookings" section at any time prior to 24 hours before check-in.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container grid-2">
+        <div class="contact-info">
+          <span class="section-tag">Get in Touch</span>
+          <h2>We are Here to Assist You</h2>
+          <p>
+            Contact our guest services for inquiries, private bookings, or
+            bespoke requests.
+          </p>
+          <div class="contact-details">
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 100 Horizon Boulevard,
+              Oceanfront, CA 90210
+            </p>
+            <p><i class="fas fa-phone-alt"></i> +1 (800) 555-AURA</p>
+            <p><i class="fas fa-envelope"></i> reservations@auragrand.com</p>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <h3>Send a Message</h3>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message..." rows="4" required></textarea>
+          <button type="submit" class="btn btn-gold">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <a href="#" class="logo">AURA <span>GRAND</span></a>
+          <p>
+            Redefining luxury hospitality with serene spaces and elite guest
+            experiences.
+          </p>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Subscribe to Our Newsletter</h4>
+          <form id="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn-gold">Join</button>
+          </form>
+        </div>
+        <div class="footer-socials">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Aura Grand Hotel & Resort. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scroll-top" class="scroll-top-btn" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" src="" alt="Enlarged View" />
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+      <div class="modal-content glass">
+        <span class="modal-close" id="modal-close-btn">&times;</span>
+        <h2>Complete Your Reservation</h2>
+        <div class="modal-body grid-2">
+          <div class="modal-room-summary" id="modal-room-summary">
+            <!-- Populated by JS -->
+          </div>
+          <form id="modal-booking-form" class="modal-form">
+            <input type="hidden" id="modal-room-id" />
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" id="guest-name" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="guest-email" required />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="guest-phone" required />
+            </div>
+            <div class="form-group">
+              <label>Number of Guests</label>
+              <input
+                type="number"
+                id="guest-count"
+                min="1"
+                max="6"
+                value="2"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Check-in Date</label>
+              <input type="date" id="modal-checkin" required />
+            </div>
+            <div class="form-group">
+              <label>Check-out Date</label>
+              <input type="date" id="modal-checkout" required />
+            </div>
+            <div class="form-group full-width">
+              <label>Special Requests</label>
+              <textarea
+                id="guest-requests"
+                rows="2"
+                placeholder="Late check-in, high floor, etc."
+              ></textarea>
+            </div>
+
+            <div class="price-calculation full-width" id="price-calculation">
+              <p>Total Nights: <span id="calc-nights">0</span></p>
+              <p>Price per Night: $<span id="calc-rate">0</span></p>
+              <h3>Total Price: $<span id="calc-total">0</span></h3>
+            </div>
+
+            <button type="submit" class="btn btn-gold full-width">
+              Proceed to Payment
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fake Payment & Receipt Modal -->
+    <div id="receipt-modal" class="modal">
+      <div class="modal-content glass receipt-card">
+        <span class="modal-close" id="receipt-close-btn">&times;</span>
+        <div class="receipt-header">
+          <i class="fas fa-check-circle success-icon"></i>
+          <h2>Booking Confirmed!</h2>
+          <p>Thank you for choosing Aura Grand Hotel.</p>
+        </div>
+        <div class="receipt-details" id="receipt-details">
+          <!-- Rendered via JS -->
+        </div>
+        <div class="receipt-actions">
+          <button class="btn btn-gold" onclick="window.print()">
+            <i class="fas fa-print"></i> Print Receipt
+          </button>
+          <button class="btn btn-dark" id="close-receipt-btn">Done</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
