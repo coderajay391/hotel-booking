@@ -3,6 +3,8 @@
 A fully responsive, interactive luxury hotel booking website built with vanilla HTML, CSS, and JavaScript. This single-page application features a rich UI with dark/light mode, room filtering, a complete booking flow with local storage persistence, and an elegant visual design inspired by high-end hospitality.
 
 ![Preview](https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80)
+<image src="./assets/hotel-booking1.png"></image>
+<image src="./assets/hotel-booking2.png"></image>
 
 ---
 
