@@ -1,10 +1,8 @@
-# 🏨 Aura Grand Hotel & Resort
+# 🌙 The Night Hotel & Resort
 
 A fully responsive, interactive luxury hotel booking website built with vanilla HTML, CSS, and JavaScript. This single-page application features a rich UI with dark/light mode, room filtering, a complete booking flow with local storage persistence, and an elegant visual design inspired by high-end hospitality.
 
 ![Preview](https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80)
-<image src="./assets/hotel-booking1.png"></image>
-<image src="./assets/hotel-booking2.png"></image>
 
 ---
 
@@ -47,8 +45,8 @@ No frameworks, no build tools, no external dependencies beyond icon/font CDNs.
 3. No build step required – everything runs directly in the browser.
 
 ```bash
-git clone https://github.com/your-username/aura-grand-hotel.git
-cd aura-grand-hotel
+git clone https://github.com/your-username/the-night-hotel.git
+cd the-night-hotel
 open index.html
 ```
 
@@ -61,7 +59,7 @@ hotel-booking/
 ├── index.html          # Main HTML document with all sections
 ├── style.css           # Full stylesheet (theming, layout, components, responsive)
 ├── script.js           # Application logic (data, state, rendering, events)
-├── DOCUMENTATION.md    # Project documentation (empty placeholder)
+├── DOCUMENTATION.md    # Technical documentation for developers
 ├── README.md           # You are here
 └── assets/             # Directory for local assets (currently empty)
 ```
@@ -74,10 +72,10 @@ Four featured room types are available in the demo data:
 
 | Room                     | Type         | Price/Night | Max Guests |
 | ------------------------ | ------------ | ----------- | ---------- |
-| Oceanfront Deluxe Room   | Deluxe       | $250        | 2          |
-| Executive Skyline Suite  | Executive    | $420        | 3          |
-| Royal Presidential Suite | Presidential | $750        | 4          |
-| Grand Horizon Penthouse  | Penthouse    | $980        | 5          |
+| Oceanfront Deluxe Room   | Deluxe       | ₹899        | 2          |
+| Executive Skyline Suite  | Executive    | ₹799        | 3          |
+| Royal Presidential Suite | Presidential | ₹1,099      | 4          |
+| Grand Horizon Penthouse  | Penthouse    | ₹1,199      | 5          |
 
 Rooms can be filtered by **type** (All / Deluxe / Executive / Presidential / Penthouse) and by **maximum price** via the range slider.
 
