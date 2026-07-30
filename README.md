@@ -4,6 +4,15 @@ A fully responsive, interactive luxury hotel booking website built with vanilla 
 
 ![Preview](https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80)
 
+## Preview 
+<image src="./assets/hotel-bookin1.png"></image>
+<image src="./assets/hotel-bookin2.png"></image>
+<image src="./assets/hotel-bookin3.png"></image>
+<image src="./assets/hotel-bookin4.png"></image>
+<image src="./assets/hotel-bookin5.png"></image>
+<image src="./assets/hotel-bookin6.png"></image>
+<image src="./assets/hotel-bookin7.png"></image>
+<image src="./assets/hotel-bookin8.png"></image>
 ---
 
 ## ✨ Features
